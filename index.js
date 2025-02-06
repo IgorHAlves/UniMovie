@@ -24,7 +24,7 @@ async function fetchData() {
     }
 }
 
-async function funcaoTeste() {
+async function createCard() {
     fetchData()
         .then(x => {
             let moviesAPi = ""
@@ -35,7 +35,7 @@ async function funcaoTeste() {
 
 
                 moviesAPi = `
-                        <div  class="teste flex-column card shadow m-5 rounded" style="width: 18rem; color: white !important; background-color: #232323 !important">
+                        <div  class="movie flex-column card shadow m-5 rounded" style="width: 18rem; color: white !important; background-color: #232323 !important">
                             <img class="card-img-top p-4" src="https://image.tmdb.org/t/p/w500/${element.poster_path}" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">${element.title}</h5>
@@ -50,7 +50,7 @@ async function funcaoTeste() {
 
             $("#search").on("keyup", function () {
                 var value = $(this).val().toLowerCase();
-                $(".teste").filter(function () {
+                $(".movie").filter(function () {
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                     console.log(value)
                 });
@@ -60,6 +60,6 @@ async function funcaoTeste() {
 };
 
 
-funcaoTeste()
+createCard()
 
 
