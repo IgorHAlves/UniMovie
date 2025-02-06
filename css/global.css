@@ -1,0 +1,35 @@
+:root {
+    --fundo-cinza: #232323
+}
+
+nav {
+    background-color: var(--fundo-cinza) !important;
+    position: fixed !important;
+    width: 100%;
+    z-index: 2;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+body {
+    background-color: black !important;
+}
+
+.logo {
+    padding: 5px;
+    width: 200px;
+    height: auto;
+}
+
+#movies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#movieCards {
+    margin-top: 7rem;
+
+}
